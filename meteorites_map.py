@@ -3,11 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import pydeck as pdk
-import os
-cwd = os.getcwd()
 
 # Preparing the data
-df = pd.read_csv(cwd + '\\data.csv')
+df = pd.read_csv('data.csv')
 df.dropna(inplace=True)
 df.GeoLocation = df.GeoLocation.str.replace("(", "").str.replace(")", "").str.split(",")
 # Making a Python list to store the latitude and longitude
